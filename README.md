@@ -10,7 +10,7 @@
 Non-parametric testing procedure for identifying differences between
 multiple groups in a population. Implementation of Dunn JO (1964).
 Multiple Comparisons Using Rank Sums, Technometrics, 6:3, 241-252. doi:
-(10.1080/00401706.1964.10490181)\[<https://doi.org/10.1080/00401706.1964.10490181>\]
+[10.1080/00401706.1964.10490181](https://doi.org/10.1080/00401706.1964.10490181)
 
 ## Installation
 
