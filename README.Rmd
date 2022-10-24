@@ -1,0 +1,40 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+```
+
+# dunnR - Dunn test for multiple comparisons using rank sums
+
+<!-- badges: start -->
+<!-- badges: end -->
+
+Non-parametric testing procedure for identifying differences between multiple
+groups in a population. Implementation of Dunn JO (1964). Multiple
+Comparisons Using Rank Sums, Technometrics, 6:3, 241-252. doi: (10.1080/00401706.1964.10490181)[https://doi.org/10.1080/00401706.1964.10490181]
+
+## Installation
+
+dunnR is not yet available on CRAN, but you can install it using devtools:
+
+``` r
+install.packages("devtools")
+devtools::install_github("bnanes/dunnR")
+```
+
+## Example
+
+```{r example}
+library(dunnR)
+dunn.test(mpg ~ cyl, data = mtcars)
+```
+

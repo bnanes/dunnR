@@ -1,0 +1,15 @@
+Package: dunnR
+Type: Package
+Title: Dunn Test for Multiple Comparisons Using Rank Sums
+Version: 0.1.0
+Authors@R: person("Benjamin", "Nanes", email = "benjamin.nanes@utsouthwestern.edu",
+    role = c("aut", "cre"), comment = c(ORCID = "0000-0001-9686-1611"))
+Description: Non-parametric testing procedure for identifying differences 
+    between multiple groups in a population. 
+    Implementation of Dunn JO (1964). Multiple Comparisons Using Rank Sums,
+    Technometrics, 6:3, 241-252.
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 7.1.1
+Roxygen: list(markdown = TRUE)
