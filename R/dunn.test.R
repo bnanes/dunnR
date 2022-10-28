@@ -99,7 +99,7 @@ dunn.test <- function(x, ...) UseMethod("dunn.test")
 #' @export
 dunn.test.default <- function(x, g,
                         compare.all = TRUE, baseline.group = ifelse(missing(g), NULL, levels(factor(g))[1]), contrast = NULL,
-                        p.adj.method = p.adjust.methods, alpha = 0.05) {
+                        p.adj.method = p.adjust.methods, alpha = 0.05, ...) {
     if (is.list(x)) {
         if (length(x) < 2L)
             stop("'x' must be a list with at least 2 elements")
@@ -151,12 +151,12 @@ dunn.test.formula <- function(formula, data, ...) {
     if(is.matrix(eval(m$data, parent.frame())))
         m$data <- as.data.frame(data)
     m[[1L]] <- quote(stats::model.frame)
-    mf <- eval(m, parent.frame())
+    mf <- model.frame(formula, data)
     if(length(mf) > 2L)
         stop("'formula' should be of the form response ~ group")
     dataName <- paste(names(mf), collapse = " by ")
     names(mf) <- NULL
-    y <- do.call("dunn.test", as.list(mf))
+    y <- dunn.test(unlist(mf[1]), unlist(mf[2]), ...)
     y$data.name <- dataName
     y
 }
