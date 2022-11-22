@@ -117,11 +117,11 @@ dunn.test.default <- function(x, g,
     } else {
         if (length(x) != length(g))
             stop("'x' and 'g' must have the same length")
+        if (!is.factor(g))
+            g <- factor(g)
         if (!all(is.finite(g)))
             stop("all group levels must be finite")
         dataName <- paste(deparse(substitute(x)), "and", deparse(substitute(g)))
-        if (!is.factor(g))
-            g <- factor(g)
     }
 
     # Default to Bonferroni, which is the method used in the original publication
